@@ -17,7 +17,7 @@ body {
   background-position: bottom right, center;
   background-attachment: fixed;
   background-size: cover, 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* Styling for the header and header content */
