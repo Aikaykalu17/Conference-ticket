@@ -462,7 +462,6 @@ input.red-placeholder::placeholder {
     background-position: bottom left, top right, center, calc(100% - 15%);
     background-repeat: no-repeat;
     background-size: 50%, 30%, cover, 30%;
-    margin-top: 30px;
   }
 
   /* Styling for the description */
@@ -895,7 +894,6 @@ input.red-placeholder::placeholder {
     background-position: bottom left, top right, center, calc(100% - 15%);
     background-repeat: no-repeat;
     background-size: 50%, 30%, cover, 30%;
-    margin-top: 30px;
   }
 
   /* Styling for the description */
