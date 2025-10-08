@@ -5,7 +5,6 @@ let globalSelectedAvatar = null;
 const dropZone = document.getElementById('drop-zone');
 const fileInput = document.getElementById('file-input');
 const errorMessageElement = document.getElementById('error-message');
-const uploadIcon = document.getElementById('uplaod-svg-div');
 const generateBtn = document.querySelector('.generate-btn');
 const uploadSvg = document.querySelector('.upload-svg');
 const imgControls = document.getElementById('image-controls');
@@ -143,7 +142,8 @@ const handleFiles = function (files) {
   }
 
   // To show the name of the selected photo after loading it
-  uploadLabel.textContent = `${pictureFile.name}`;
+  // uploadLabel.textContent = `${pictureFile.name}`;
+  uploadLabel.textContent = '';
   // /////////////////////////////
 
   const reader = new FileReader();
@@ -206,7 +206,7 @@ removeButton.addEventListener('click', e => {
 const checkInputField = function () {
   let isValid = true;
   inputFields.forEach((input, index) => {
-    let hiddenSpan = hiddenSpans[index];
+    const hiddenSpan = hiddenSpans[index];
     if (input.value.trim() === '') {
       hiddenSpan.style.display = 'block';
       hiddenSpan.style.fontSize = '13px';
@@ -238,7 +238,7 @@ const validateEmail = function (email) {
 inputFields.forEach(inputs => {
   inputs.addEventListener('input', checkInputField);
 });
-// ///////////////////////////////
+// // ///////////////////////////////
 
 // Getting the date of today
 const today = new Date();

@@ -231,6 +231,7 @@ label {
   color: hsl(248, 70%, 10%);
   font-weight: 600;
   cursor: pointer;
+  border: none;
 }
 
 input.red-placeholder::placeholder {
@@ -642,6 +643,7 @@ input.red-placeholder::placeholder {
     color: hsl(248, 70%, 10%);
     font-weight: 600;
     cursor: pointer;
+    border: none;
   }
 
   input.red-placeholder::placeholder {
@@ -1074,6 +1076,7 @@ input.red-placeholder::placeholder {
     color: hsl(248, 70%, 10%);
     font-weight: 600;
     cursor: pointer;
+    border: none;
   }
 
   input.red-placeholder::placeholder {
