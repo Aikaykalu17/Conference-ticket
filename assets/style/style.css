@@ -1,0 +1,1254 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(248, 70%, 10%);
+  width: 100%;
+  height: 100vh;
+  font-family: 'Inconsolata', monospace;
+  background-image: url(/assets/images/background-desktop.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom right, center;
+  background-attachment: fixed;
+  background-size: cover, 100%;
+  overflow: hidden;
+}
+
+/* Styling for the header and header content */
+.header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-content {
+  height: 70px;
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* //////////////////////////////////////////// */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  background-image: url(/assets/images/pattern-squiggly-line-bottom-desktop.svg),
+    url(/assets/images/pattern-squiggly-line-top.svg),
+    url(/assets/images/pattern-lines.svg),
+    url(/assets/images/pattern-circle.svg);
+  background-position: bottom left, top right, center, calc(100% - 15%);
+  background-repeat: no-repeat;
+  background-size: 50%, 30%, cover, 30%;
+}
+
+/* Styling for the description */
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  height: auto;
+}
+
+.desc-h1 {
+  color: hsl(0, 0%, 100%);
+}
+
+.desc-p {
+  color: hsl(245, 15%, 58%);
+}
+
+/*//////////////////////////////////////////////////// */
+
+/* Styling for the form and the form elements */
+
+#form-container {
+  height: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: hsl(252, 6%, 83%);
+}
+
+/* Styling for the upload area */
+
+.upload-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 15px;
+  border: 2px dashed hsl(245, 19%, 35%);
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  width: 350px;
+  height: 180px;
+}
+
+.upload-area.dragover {
+  border-color: #007bff;
+  background-color: #f0f8ff;
+}
+
+.error-text {
+  color: #ff0000;
+  font-size: 12px;
+}
+
+.upload-svg {
+  max-height: 100%;
+}
+
+.upload-svg-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  height: auto;
+  width: 50px;
+  background-color: hsl(245, 19%, 35%);
+}
+
+.upload-p {
+  color: hsl(252, 6%, 83%);
+  font-size: 12px;
+}
+
+.image-controls.active {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  max-height: 200px;
+  gap: 15px;
+}
+
+.rmv-btn {
+  background-color: transparent;
+  border-radius: 5px;
+  font-size: 11px;
+  cursor: pointer;
+  color: hsl(252, 6%, 83%);
+  border: none;
+  outline: 1px solid hsl(245, 19%, 35%);
+  height: 17px;
+  width: 100px;
+}
+
+.change-btn {
+  background-color: transparent;
+  border-radius: 5px;
+  font-size: 11px;
+  cursor: pointer;
+  color: hsl(252, 6%, 83%);
+  border: none;
+  outline: 1px solid hsl(245, 19%, 35%);
+  height: 17px;
+  width: 100px;
+}
+
+.span-jpg {
+  font-size: 10px;
+}
+
+/* ////////////////////// */
+/* Styling for the input fields */
+.full-name-input {
+  width: 350px;
+  height: 40px;
+  border-radius: 10px;
+  outline: 1px solid hsl(245, 19%, 35%);
+  border: none;
+  background-color: transparent;
+  padding: 5px 20px;
+  color: hsl(252, 6%, 83%);
+}
+
+.email-input {
+  width: 350px;
+  height: 40px;
+  border-radius: 10px;
+  outline: 1px solid hsl(245, 19%, 35%);
+  border: none;
+  background-color: transparent;
+  padding: 5px 20px;
+  color: hsl(252, 6%, 83%);
+}
+
+.email-input::placeholder {
+  color: hsl(252, 6%, 83%);
+}
+
+.username-input {
+  width: 350px;
+  height: 40px;
+  border-radius: 10px;
+  outline: 1px solid hsl(245, 19%, 35%);
+  border: none;
+  background-color: transparent;
+  color: hsl(252, 6%, 83%);
+  padding: 5px 20px;
+}
+
+.username-input::placeholder {
+  color: hsl(252, 6%, 83%);
+}
+
+.generate-btn {
+  width: 350px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: hsl(7, 88%, 67%);
+  color: hsl(248, 70%, 10%);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+input.red-placeholder::placeholder {
+  color: red;
+}
+
+.hidden-span {
+  color: #ff0000;
+  display: none;
+}
+
+.full-name-div {
+  height: 90px;
+}
+
+.username-div-container {
+  height: 90px;
+}
+
+.email-div {
+  height: 90px;
+}
+
+/* //////////////////////////// */
+
+/* Styling for the success message container */
+
+/* Hides elements by default */
+.hidden {
+  display: none;
+}
+
+/* ///////////////////////////// */
+
+.success-message-container {
+  display: none;
+}
+
+.success-message-container.active {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.congrats-title {
+  font-size: 3em;
+  color: hsl(0, 0%, 100%);
+}
+
+.display-first-name {
+  background: linear-gradient(to right, #ff0066, #6600ff);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.congrats-subtitle {
+  font-size: 2em;
+  color: hsl(0, 0%, 100%);
+}
+
+.email-confirmation {
+  font-size: 1.2em;
+  color: #ccc;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.email-confirmation span {
+  color: #ff69b4;
+  font-weight: bold;
+}
+
+.ticket-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pattern-ticket {
+  max-width: 100%;
+}
+
+.ticket-info {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  transform: translate(-120px, -230px);
+}
+
+.pattern-ticket-logo {
+  width: 100%;
+}
+
+.img-div-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  transform: translate(0px, 0px);
+  text-align: right;
+  width: max-content;
+}
+
+.img-div-span {
+  color: hsl(252, 6%, 83%);
+  font-size: 15px;
+}
+
+.img-div-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: max-content;
+  gap: 10px;
+  transform: translate(0px, 0px);
+}
+
+.img-column-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.img-column-span {
+  color: hsl(0, 0%, 100%);
+}
+
+.username-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.img-username {
+  color: hsl(0, 0%, 100%);
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.ticket-number {
+  color: hsl(252, 6%, 83%);
+  width: max-content;
+  transform: translate(250px, -340px) rotate(90deg);
+}
+
+/* //////////////////////////////////////////////// */
+
+/* Styling for the copyright */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+
+.attribution a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+
+/* /////////////////////////////////// */
+
+@media only screen and (min-width: 360px) and (max-width: 475px) {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(248, 70%, 10%);
+    width: 100%;
+    height: 100vh;
+    font-family: 'Inconsolata', monospace;
+    background-image: url(/assets/images/background-mobile.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, center;
+    background-attachment: fixed;
+    background-size: cover, 100%;
+    overflow: unset;
+  }
+
+  /* Styling for the header and header content */
+  .header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-content {
+    height: 70px;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* //////////////////////////////////////////// */
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    background-image: url(/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg),
+      url(/assets/images/pattern-squiggly-line-top.svg),
+      url(/assets/images/pattern-lines.svg),
+      url(/assets/images/pattern-circle.svg);
+    background-position: bottom left, top right, center, calc(100% - 15%);
+    background-repeat: no-repeat;
+    background-size: 50%, 30%, cover, 30%;
+  }
+
+  /* Styling for the description */
+  .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: auto;
+    text-align: center;
+  }
+
+  .desc-h1 {
+    color: hsl(0, 0%, 100%);
+    font-size: 25px;
+  }
+
+  .desc-p {
+    color: hsl(245, 15%, 58%);
+    font-size: 20px;
+  }
+
+  /*//////////////////////////////////////////////////// */
+
+  /* Styling for the form and the form elements */
+
+  #form-container {
+    height: 100%;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: hsl(252, 6%, 83%);
+  }
+
+  /* Styling for the upload area */
+
+  .upload-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 15px;
+    border: 2px dashed hsl(245, 19%, 35%);
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    width: 350px;
+    height: 190px;
+  }
+
+  .upload-area.dragover {
+    border-color: #007bff;
+    background-color: #f0f8ff;
+  }
+
+  .error-text {
+    color: #ff0000;
+    font-size: 12px;
+  }
+
+  .upload-svg {
+    max-height: 100%;
+  }
+
+  .upload-svg-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    height: auto;
+    width: 50px;
+    background-color: hsl(245, 19%, 35%);
+  }
+
+  .upload-p {
+    color: hsl(252, 6%, 83%);
+    font-size: 12px;
+  }
+
+  .image-controls.active {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 200px;
+    gap: 15px;
+  }
+
+  .rmv-btn {
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 11px;
+    cursor: pointer;
+    color: hsl(252, 6%, 83%);
+    border: none;
+    outline: 1px solid hsl(245, 19%, 35%);
+    height: 17px;
+    width: 100px;
+  }
+
+  .change-btn {
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 11px;
+    cursor: pointer;
+    color: hsl(252, 6%, 83%);
+    border: none;
+    outline: 1px solid hsl(245, 19%, 35%);
+    height: 17px;
+    width: 100px;
+  }
+
+  .span-jpg {
+    font-size: 10px;
+  }
+
+  /* ////////////////////// */
+  /* Styling for the input fields */
+  .full-name-input {
+    width: 350px;
+    height: 40px;
+    border-radius: 10px;
+    outline: 1px solid hsl(245, 19%, 35%);
+    border: none;
+    background-color: transparent;
+    padding: 5px 20px;
+    color: hsl(252, 6%, 83%);
+  }
+
+  .email-input {
+    width: 350px;
+    height: 40px;
+    border-radius: 10px;
+    outline: 1px solid hsl(245, 19%, 35%);
+    border: none;
+    background-color: transparent;
+    padding: 5px 20px;
+    color: hsl(252, 6%, 83%);
+  }
+
+  .email-input::placeholder {
+    color: hsl(252, 6%, 83%);
+  }
+
+  .username-input {
+    width: 350px;
+    height: 40px;
+    border-radius: 10px;
+    outline: 1px solid hsl(245, 19%, 35%);
+    border: none;
+    background-color: transparent;
+    color: hsl(252, 6%, 83%);
+    padding: 5px 20px;
+  }
+
+  .username-input::placeholder {
+    color: hsl(252, 6%, 83%);
+  }
+
+  .generate-btn {
+    width: 350px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: hsl(7, 88%, 67%);
+    color: hsl(248, 70%, 10%);
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  input.red-placeholder::placeholder {
+    color: red;
+  }
+
+  .hidden-span {
+    color: #ff0000;
+    display: none;
+  }
+
+  .full-name-div {
+    height: 90px;
+  }
+
+  .username-div-container {
+    height: 90px;
+  }
+
+  .email-div {
+    height: 90px;
+  }
+
+  /* //////////////////////////// */
+
+  /* Styling for the success message container */
+
+  /* Hides elements by default */
+  .hidden {
+    display: none;
+  }
+
+  /* ///////////////////////////// */
+
+  .success-message-container {
+    display: none;
+  }
+
+  .success-message-container.active {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .congrats-title {
+    font-size: 30px;
+    color: hsl(0, 0%, 100%);
+  }
+
+  .display-first-name {
+    background: linear-gradient(to right, #ff0066, #6600ff);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  .congrats-subtitle {
+    font-size: 25px;
+    color: hsl(0, 0%, 100%);
+  }
+
+  .email-confirmation {
+    font-size: 20px;
+    color: #ccc;
+    max-width: 600px;
+    line-height: 1.5;
+  }
+
+  .email-confirmation span {
+    color: #ff69b4;
+    font-weight: bold;
+  }
+
+  .ticket-div {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pattern-ticket {
+    max-width: 90%;
+    position: relative;
+  }
+
+  .ticket-info {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    gap: 20px;
+    transform: translate(15%, -120%);
+  }
+
+  .pattern-ticket-logo {
+    width: 50%;
+  }
+
+  .img-div-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    transform: translate(0px, 0px);
+    text-align: right;
+    width: max-content;
+  }
+
+  .img-div-span {
+    color: hsl(252, 6%, 83%);
+    font-size: 13px;
+  }
+
+  .img-div-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: max-content;
+    gap: 10px;
+    transform: translate(0px, 0px);
+  }
+
+  .img-column-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .img-column-span {
+    color: hsl(0, 0%, 100%);
+    font-size: 13px;
+  }
+
+  .username-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .img-username {
+    color: hsl(0, 0%, 100%);
+    font-size: 13px;
+  }
+
+  .avatar {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .ticket-number {
+    color: hsl(252, 6%, 83%);
+    width: max-content;
+    display: flex;
+    transform: translate(20rem, -230px) rotate(90deg);
+  }
+
+  /* //////////////////////////////////////////////// */
+
+  /* Styling for the copyright */
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+  }
+
+  .attribution a {
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+  }
+
+  /* /////////////////////////////////// */
+}
+
+@media only screen and (max-width: 360px) {
+  .ticket-info {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    gap: 20px;
+    transform: translate(15%, -110%);
+  }
+
+  .ticket-number {
+    color: hsl(252, 6%, 83%);
+    width: max-content;
+    display: flex;
+    transform: translate(17.5rem, -223px) rotate(90deg);
+  }
+}
+@media only screen and (max-width: 915px) and (orientation: landscape) {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(248, 70%, 10%);
+    width: 100%;
+    height: 100vh;
+    font-family: 'Inconsolata', monospace;
+    background-image: url(/assets/images/background-mobile.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom right, center;
+    background-attachment: fixed;
+    background-size: cover, 100%;
+    overflow: unset;
+  }
+
+  /* Styling for the header and header content */
+  .header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-content {
+    height: 70px;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* //////////////////////////////////////////// */
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    background-image: url(/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg),
+      url(/assets/images/pattern-squiggly-line-top.svg),
+      url(/assets/images/pattern-lines.svg),
+      url(/assets/images/pattern-circle.svg);
+    background-position: bottom left, top right, center, calc(100% - 15%);
+    background-repeat: no-repeat;
+    background-size: 50%, 30%, cover, 30%;
+  }
+
+  /* Styling for the description */
+  .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: auto;
+    text-align: center;
+  }
+
+  .desc-h1 {
+    color: hsl(0, 0%, 100%);
+    font-size: 25px;
+  }
+
+  .desc-p {
+    color: hsl(245, 15%, 58%);
+    font-size: 20px;
+  }
+
+  /*//////////////////////////////////////////////////// */
+
+  /* Styling for the form and the form elements */
+
+  #form-container {
+    height: 100%;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: hsl(252, 6%, 83%);
+  }
+
+  /* Styling for the upload area */
+
+  .upload-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 15px;
+    border: 2px dashed hsl(245, 19%, 35%);
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    width: 350px;
+    height: 190px;
+  }
+
+  .upload-area.dragover {
+    border-color: #007bff;
+    background-color: #f0f8ff;
+  }
+
+  .error-text {
+    color: #ff0000;
+    font-size: 12px;
+  }
+
+  .upload-svg {
+    max-height: 100%;
+  }
+
+  .upload-svg-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    height: auto;
+    width: 50px;
+    background-color: hsl(245, 19%, 35%);
+  }
+
+  .upload-p {
+    color: hsl(252, 6%, 83%);
+    font-size: 12px;
+  }
+
+  .image-controls.active {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 200px;
+    gap: 15px;
+  }
+
+  .rmv-btn {
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 11px;
+    cursor: pointer;
+    color: hsl(252, 6%, 83%);
+    border: none;
+    outline: 1px solid hsl(245, 19%, 35%);
+    height: 17px;
+    width: 100px;
+  }
+
+  .change-btn {
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 11px;
+    cursor: pointer;
+    color: hsl(252, 6%, 83%);
+    border: none;
+    outline: 1px solid hsl(245, 19%, 35%);
+    height: 17px;
+    width: 100px;
+  }
+
+  .span-jpg {
+    font-size: 10px;
+  }
+
+  /* ////////////////////// */
+  /* Styling for the input fields */
+  .full-name-input {
+    width: 350px;
+    height: 40px;
+    border-radius: 10px;
+    outline: 1px solid hsl(245, 19%, 35%);
+    border: none;
+    background-color: transparent;
+    padding: 5px 20px;
+    color: hsl(252, 6%, 83%);
+  }
+
+  .email-input {
+    width: 350px;
+    height: 40px;
+    border-radius: 10px;
+    outline: 1px solid hsl(245, 19%, 35%);
+    border: none;
+    background-color: transparent;
+    padding: 5px 20px;
+    color: hsl(252, 6%, 83%);
+  }
+
+  .email-input::placeholder {
+    color: hsl(252, 6%, 83%);
+  }
+
+  .username-input {
+    width: 350px;
+    height: 40px;
+    border-radius: 10px;
+    outline: 1px solid hsl(245, 19%, 35%);
+    border: none;
+    background-color: transparent;
+    color: hsl(252, 6%, 83%);
+    padding: 5px 20px;
+  }
+
+  .username-input::placeholder {
+    color: hsl(252, 6%, 83%);
+  }
+
+  .generate-btn {
+    width: 350px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: hsl(7, 88%, 67%);
+    color: hsl(248, 70%, 10%);
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  input.red-placeholder::placeholder {
+    color: red;
+  }
+
+  .hidden-span {
+    color: #ff0000;
+    display: none;
+  }
+
+  .full-name-div {
+    height: 90px;
+  }
+
+  .username-div-container {
+    height: 90px;
+  }
+
+  .email-div {
+    height: 90px;
+  }
+
+  /* //////////////////////////// */
+
+  /* Styling for the success message container */
+
+  /* Hides elements by default */
+  .hidden {
+    display: none;
+  }
+
+  /* ///////////////////////////// */
+
+  .success-message-container {
+    display: none;
+  }
+
+  .success-message-container.active {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .congrats-title {
+    font-size: 30px;
+    color: hsl(0, 0%, 100%);
+  }
+
+  .display-first-name {
+    background: linear-gradient(to right, #ff0066, #6600ff);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  .congrats-subtitle {
+    font-size: 25px;
+    color: hsl(0, 0%, 100%);
+  }
+
+  .email-confirmation {
+    font-size: 20px;
+    color: #ccc;
+    max-width: 600px;
+    line-height: 1.5;
+  }
+
+  .email-confirmation span {
+    color: #ff69b4;
+    font-weight: bold;
+  }
+
+  .ticket-div {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pattern-ticket {
+    max-width: 90%;
+    position: relative;
+  }
+
+  .ticket-info {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    gap: 20px;
+    transform: translate(25%, -150%);
+  }
+
+  .pattern-ticket-logo {
+    width: 50%;
+  }
+
+  .img-div-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    transform: translate(0px, 0px);
+    text-align: right;
+    width: max-content;
+  }
+
+  .img-div-span {
+    color: hsl(252, 6%, 83%);
+    font-size: 13px;
+  }
+
+  .img-div-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: max-content;
+    gap: 10px;
+    transform: translate(0px, 0px);
+  }
+
+  .img-column-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .img-column-span {
+    color: hsl(0, 0%, 100%);
+    font-size: 13px;
+  }
+
+  .username-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .img-username {
+    color: hsl(0, 0%, 100%);
+    font-size: 13px;
+  }
+
+  .avatar {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .ticket-number {
+    color: hsl(252, 6%, 83%);
+    width: max-content;
+    display: flex;
+    transform: translate(30rem, -270px) rotate(90deg);
+  }
+
+  /* //////////////////////////////////////////////// */
+
+  /* Styling for the copyright */
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+  }
+
+  .attribution a {
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+  }
+
+  /* /////////////////////////////////// */
+}

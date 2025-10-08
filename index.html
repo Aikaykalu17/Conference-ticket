@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+
+  <title>Frontend Mentor | Conference ticket generator</title>
+  <link rel="stylesheet" href="/assets/style/style.css" />
+  <script defer src="/assets/script/script.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-content">
+      <img src="/assets/images/logo-full.svg" alt="" aria-hidden="true" />
+    </div>
+  </header>
+  <main class="main">
+    <div class="description">
+      <h1 class="desc-h1">
+        Your Journey to Coding Conf <br />
+        2025 Starts Here!
+      </h1>
+      <p class="desc-p">
+        Secure your spot at next year's biggest coding conference.
+      </p>
+    </div>
+    <!-- Form starts -->
+    <section id="form-container">
+      <form action="" class="form" autocomplete="off">
+        <label for="">
+          Upload Avatar
+          <div id="drop-zone" class="upload-area" aria-labelledby="upload-label" role="group">
+            <div class="upload-svg-div">
+              <img src="/assets/images/icon-upload.svg" alt="" class="upload-svg" />
+              <img src="" alt="Image preview" style="max-width: 100%; max-height: 200px; border-radius: 10px"
+                id="image-preview" hidden />
+
+            </div>
+            <p id="upload-label" class="upload-p">
+              Drag and drop or click to upload your photo
+            </p>
+            <input type="file" name="" id="file-input" accept="image/*" hidden />
+            <div id="image-controls" class="image-controls" hidden>
+              <button id="remove-btn" class="rmv-btn">Remove Image</button>
+              <button id="change-btn" class="change-btn">Change Image</button>
+            </div>
+        </label>
+        <div id="error-message" class="error-text" role="alert" aria-live="assertive" hidden></div>
+
+        </div>
+        <span class="span-jpg">(JPG or PNG, max size: 500KB).</span>
+ <div class="full-name-div">
+         <label for="full-name">
+          Full Name
+
+          <input type="text" name="" id="full-name" class="full-name-input input-field" />
+          <span class="full-name-span hidden-span">Full name cannot be empty!</span>
+        </label>
+ </div>
+  <div class="email-div">
+          <label for="email">Email Address
+
+          <input type="email" name="example@email.com" placeholder="example@email.com" id="email"
+            class="email-input input-field" />
+          <span class="email-span hidden-span">Email cannot be empty!</span>
+        </label>
+  </div>
+<div class="username-div-container">
+          <label for="username">Github Address
+
+          <input type="text" name="@yourusername" placeholder="@yourusername" id="username"
+            class="username-input input-field" />
+          <span class="username-span hidden-span">Username cannot be empty!</span>
+        </label>
+</div>
+        <button class="generate-btn">Generate My Ticket</button>
+      </form>
+    </section>
+
+    <section id="success-message-container" class="success-message-container">
+      <h1 class="congrats-title">Congrats, <span id="display-first-name" class="display-first-name"></span>.</h1>
+      <p class="congrats-subtitle">Your ticket is ready</p>
+      <p class="email-confirmation">We've emailed your ticket to <span id="display-email"></span> and will send updates
+        in the run up to the event.</p>
+      <div class="ticket-div">
+        <img src="/assets/images/pattern-ticket.svg" alt="pattern-ticket" class="pattern-ticket">
+ <div class="ticket-info">
+         <div class="img-div-column">
+          <img src="/assets/images/logo-full.svg" alt="" aria-hidden="true" class="pattern-ticket-logo">
+          <span class="img-div-span">
+            <span class="day-span"></span>, <span class="month-span"></span>, <span class="year-span"></span> /
+            Austin, TX
+          </span>
+        </div>
+        <div class="img-div-row">
+          <div class="human-logo-div">
+            <img src="" alt="" class="avatar" id="ticket-avatar">
+          </div>
+          <div class="img-column-div">
+            <span class="img-column-span"></span>
+            <div class="username-div">
+              <img src="/assets/images/icon-github.svg" alt="">
+              <span class="img-username"></span>
+            </div>
+          </div>
+        </div>
+ </div>
+        <span class="ticket-number"></span>
+      </div>
+    </section>
+        <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by
+      <a href="https://www.github.com/Aikaykalu17">Aikay Kalu Amogu</a>.
+    </div>
+  </main>
+
+</body>
+
+</html>
