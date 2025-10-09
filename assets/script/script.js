@@ -235,9 +235,9 @@ const validateEmail = function (email) {
 // ///////////////////////////////////
 
 //  Adding an event listener to the input fields
-inputFields.forEach(inputs => {
-  inputs.addEventListener('input', checkInputField);
-});
+// inputFields.forEach(inputs => {
+//   inputs.addEventListener('input', checkInputField);
+// });
 // // ///////////////////////////////
 
 // Getting the date of today
